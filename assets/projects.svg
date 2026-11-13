@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 220" width="100%" height="100%">
+  <defs>
+    <!-- Card 1 Gradient (Cyan -> Purple) -->
+    <linearGradient id="c1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe">
+        <animate attributeName="stop-color" values="#00f2fe;#7f00ff;#00f2fe" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#7f00ff">
+        <animate attributeName="stop-color" values="#7f00ff;#00f2fe;#7f00ff" dur="5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Card 2 Gradient (Pink -> Orange/Purple) -->
+    <linearGradient id="c2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f">
+        <animate attributeName="stop-color" values="#ff007f;#ff8a00;#ff007f" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#7f00ff">
+        <animate attributeName="stop-color" values="#7f00ff;#ff007f;#7f00ff" dur="5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Card 3 Gradient (Purple -> Emerald/Cyan) -->
+    <linearGradient id="c3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7">
+        <animate attributeName="stop-color" values="#a855f7;#10b981;#a855f7" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00f2fe">
+        <animate attributeName="stop-color" values="#00f2fe;#a855f7;#00f2fe" dur="5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#110d24" />
+      <stop offset="100%" stop-color="#090714" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .card-title {
+      font: 800 19px 'Segoe UI', system-ui, sans-serif;
+      fill: #ffffff;
+    }
+    .card-desc {
+      font: 400 13px 'Segoe UI', system-ui, sans-serif;
+      fill: #cbd5e1;
+    }
+    .tag {
+      font: 600 11px 'Fira Code', 'Consolas', monospace;
+    }
+    .dot-pulse {
+      animation: blink 2s infinite ease-in-out;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+  </style>
+
+  <!-- CARD 1: mikumikucrawler -->
+  <g transform="translate(10, 10)">
+    <rect width="346" height="200" rx="14" fill="url(#cardBg)" stroke="url(#c1Grad)" stroke-width="2" />
+    <circle cx="318" cy="28" r="5" fill="#00f2fe" class="dot-pulse" />
+    <text x="24" y="34" class="card-title">🌐 mikumikucrawler</text>
+    <text x="24" y="66" class="card-desc">Real-time web crawler powered by</text>
+    <text x="24" y="86" class="card-desc">Puppeteer, Cheerio &amp; Socket.io with</text>
+    <text x="24" y="106" class="card-desc">live telemetry &amp; Miku-themed UI.</text>
+
+    <!-- Tags -->
+    <rect x="24" y="148" width="90" height="24" rx="12" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" stroke-width="1" />
+    <text x="69" y="164" text-anchor="middle" class="tag" fill="#00f2fe">TypeScript</text>
+
+    <rect x="122" y="148" width="84" height="24" rx="12" fill="rgba(127, 0, 255, 0.15)" stroke="#b86bff" stroke-width="1" />
+    <text x="164" y="164" text-anchor="middle" class="tag" fill="#d8b4fe">Puppeteer</text>
+
+    <rect x="214" y="148" width="84" height="24" rx="12" fill="rgba(255, 0, 127, 0.12)" stroke="#ff007f" stroke-width="1" />
+    <text x="256" y="164" text-anchor="middle" class="tag" fill="#ff80bf">Socket.io</text>
+  </g>
+
+  <!-- CARD 2: yt-dlp-ui -->
+  <g transform="translate(377, 10)">
+    <rect width="346" height="200" rx="14" fill="url(#cardBg)" stroke="url(#c2Grad)" stroke-width="2" />
+    <circle cx="318" cy="28" r="5" fill="#ff007f" class="dot-pulse" />
+    <text x="24" y="34" class="card-title">🎬 yt-dlp-ui</text>
+    <text x="24" y="66" class="card-desc">Modern full-stack web interface for</text>
+    <text x="24" y="86" class="card-desc">downloading high-res videos, audio</text>
+    <text x="24" y="106" class="card-desc">streams &amp; playlists via yt-dlp.</text>
+
+    <!-- Tags -->
+    <rect x="24" y="148" width="90" height="24" rx="12" fill="rgba(255, 0, 127, 0.12)" stroke="#ff007f" stroke-width="1" />
+    <text x="69" y="164" text-anchor="middle" class="tag" fill="#ff80bf">TypeScript</text>
+
+    <rect x="122" y="148" width="68" height="24" rx="12" fill="rgba(250, 204, 21, 0.12)" stroke="#facc15" stroke-width="1" />
+    <text x="156" y="164" text-anchor="middle" class="tag" fill="#fde047">Python</text>
+
+    <rect x="198" y="148" width="68" height="24" rx="12" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" stroke-width="1" />
+    <text x="232" y="164" text-anchor="middle" class="tag" fill="#00f2fe">yt-dlp</text>
+  </g>
+
+  <!-- CARD 3: text-spammer -->
+  <g transform="translate(744, 10)">
+    <rect width="346" height="200" rx="14" fill="url(#cardBg)" stroke="url(#c3Grad)" stroke-width="2" />
+    <circle cx="318" cy="28" r="5" fill="#10b981" class="dot-pulse" />
+    <text x="24" y="34" class="card-title">⚡ text-spammer</text>
+    <text x="24" y="66" class="card-desc">High-speed, fully configurable</text>
+    <text x="24" y="86" class="card-desc">desktop input automation &amp; rapid</text>
+    <text x="24" y="106" class="card-desc">text dispatch utility built in C#.</text>
+
+    <!-- Tags -->
+    <rect x="24" y="148" width="54" height="24" rx="12" fill="rgba(168, 85, 247, 0.15)" stroke="#a855f7" stroke-width="1" />
+    <text x="51" y="164" text-anchor="middle" class="tag" fill="#d8b4fe">C#</text>
+
+    <rect x="86" y="148" width="62" height="24" rx="12" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1" />
+    <text x="117" y="164" text-anchor="middle" class="tag" fill="#6ee7b7">.NET</text>
+
+    <rect x="156" y="148" width="92" height="24" rx="12" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" stroke-width="1" />
+    <text x="202" y="164" text-anchor="middle" class="tag" fill="#00f2fe">Automation</text>
+  </g>
+</svg>
