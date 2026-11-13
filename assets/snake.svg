@@ -1,108 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="100%" height="100%">
   <defs>
-    <linearGradient id="gridBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d0b18" />
-      <stop offset="100%" stop-color="#130f26" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090f" />
+      <stop offset="100%" stop-color="#050508" />
     </linearGradient>
 
-    <linearGradient id="snakeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe" />
-      <stop offset="50%" stop-color="#7f00ff" />
-      <stop offset="100%" stop-color="#ff007f" />
+    <linearGradient id="trace" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#a855f7" />
     </linearGradient>
 
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-
-    <pattern id="contribGrid" width="16" height="16" patternUnits="userSpaceOnUse">
-      <rect x="2" y="2" width="12" height="12" rx="3" fill="#1a1535" />
+    <pattern id="matrix" width="22" height="14" patternUnits="userSpaceOnUse">
+      <rect x="2" y="2" width="10" height="10" rx="2.5" fill="#12131f" />
     </pattern>
   </defs>
 
   <style>
-    .snake-path {
+    .pulse {
       fill: none;
-      stroke: url(#snakeGrad);
-      stroke-width: 10;
+      stroke: url(#trace);
+      stroke-width: 3;
       stroke-linecap: round;
       stroke-linejoin: round;
-      filter: url(#neonGlow);
-      stroke-dasharray: 240 1600;
-      animation: slither 7s linear infinite;
+      stroke-dasharray: 220 1400;
+      animation: run 6s linear infinite;
     }
-    .cell-glow-1 {
-      fill: #3b0764;
-      animation: cellPulse 3s ease-in-out infinite alternate;
-    }
-    .cell-glow-2 {
-      fill: #7e22ce;
-      animation: cellPulse 4s ease-in-out 1s infinite alternate;
-    }
-    .cell-glow-3 {
-      fill: #ff007f;
-      animation: cellPulse 2.5s ease-in-out 0.5s infinite alternate;
-    }
-    .cell-glow-4 {
-      fill: #00f2fe;
-      animation: cellPulse 3.5s ease-in-out 1.5s infinite alternate;
-    }
-    @keyframes slither {
-      0% { stroke-dashoffset: 1840; }
+    .c1 { fill: #1e293b; animation: fade 3s infinite alternate; }
+    .c2 { fill: #38bdf8; animation: fade 2.4s 0.5s infinite alternate; }
+    .c3 { fill: #818cf8; animation: fade 3.2s 1.1s infinite alternate; }
+    .c4 { fill: #10b981; animation: fade 2.8s 1.7s infinite alternate; }
+    @keyframes run {
+      0% { stroke-dashoffset: 1620; }
       100% { stroke-dashoffset: 0; }
     }
-    @keyframes cellPulse {
-      0% { opacity: 0.25; }
-      100% { opacity: 0.95; }
+    @keyframes fade {
+      0% { opacity: 0.2; }
+      100% { opacity: 0.9; }
     }
   </style>
 
-  <!-- Outer Container -->
-  <rect x="2" y="2" width="876" height="176" rx="14" fill="url(#gridBg)" stroke="url(#snakeGrad)" stroke-width="1.5" />
+  <rect x="4" y="4" width="1192" height="112" rx="12" fill="url(#bg)" stroke="#1e293b" stroke-width="1" />
 
-  <!-- Contribution Matrix Cells (52 cols x 7 rows) -->
-  <g transform="translate(24, 28)">
-    <rect width="832" height="112" fill="url(#contribGrid)" />
+  <g transform="translate(28, 22)">
+    <rect width="1144" height="70" fill="url(#matrix)" />
 
-    <!-- Highlighted Cyber Cells -->
-    <rect x="34" y="18" width="12" height="12" rx="3" class="cell-glow-1" />
-    <rect x="50" y="34" width="12" height="12" rx="3" class="cell-glow-2" />
-    <rect x="82" y="50" width="12" height="12" rx="3" class="cell-glow-4" />
-    <rect x="114" y="18" width="12" height="12" rx="3" class="cell-glow-3" />
-    <rect x="146" y="66" width="12" height="12" rx="3" class="cell-glow-2" />
-    <rect x="178" y="34" width="12" height="12" rx="3" class="cell-glow-4" />
-    <rect x="210" y="82" width="12" height="12" rx="3" class="cell-glow-1" />
-    <rect x="242" y="18" width="12" height="12" rx="3" class="cell-glow-3" />
-    <rect x="274" y="50" width="12" height="12" rx="3" class="cell-glow-4" />
-    <rect x="306" y="34" width="12" height="12" rx="3" class="cell-glow-2" />
-    <rect x="338" y="66" width="12" height="12" rx="3" class="cell-glow-3" />
-    <rect x="370" y="18" width="12" height="12" rx="3" class="cell-glow-4" />
-    <rect x="402" y="82" width="12" height="12" rx="3" class="cell-glow-2" />
-    <rect x="434" y="50" width="12" height="12" rx="3" class="cell-glow-1" />
-    <rect x="466" y="34" width="12" height="12" rx="3" class="cell-glow-3" />
-    <rect x="498" y="66" width="12" height="12" rx="3" class="cell-glow-4" />
-    <rect x="530" y="18" width="12" height="12" rx="3" class="cell-glow-2" />
-    <rect x="562" y="50" width="12" height="12" rx="3" class="cell-glow-3" />
-    <rect x="594" y="82" width="12" height="12" rx="3" class="cell-glow-4" />
-    <rect x="626" y="34" width="12" height="12" rx="3" class="cell-glow-1" />
-    <rect x="658" y="66" width="12" height="12" rx="3" class="cell-glow-3" />
-    <rect x="690" y="18" width="12" height="12" rx="3" class="cell-glow-4" />
-    <rect x="722" y="50" width="12" height="12" rx="3" class="cell-glow-2" />
-    <rect x="754" y="34" width="12" height="12" rx="3" class="cell-glow-3" />
-    <rect x="786" y="66" width="12" height="12" rx="3" class="cell-glow-4" />
+    <rect x="46" y="16" width="10" height="10" rx="2.5" class="c2" />
+    <rect x="134" y="30" width="10" height="10" rx="2.5" class="c3" />
+    <rect x="222" y="16" width="10" height="10" rx="2.5" class="c1" />
+    <rect x="310" y="44" width="10" height="10" rx="2.5" class="c4" />
+    <rect x="398" y="30" width="10" height="10" rx="2.5" class="c2" />
+    <rect x="486" y="16" width="10" height="10" rx="2.5" class="c3" />
+    <rect x="574" y="44" width="10" height="10" rx="2.5" class="c2" />
+    <rect x="662" y="30" width="10" height="10" rx="2.5" class="c4" />
+    <rect x="750" y="16" width="10" height="10" rx="2.5" class="c3" />
+    <rect x="838" y="44" width="10" height="10" rx="2.5" class="c2" />
+    <rect x="926" y="30" width="10" height="10" rx="2.5" class="c1" />
+    <rect x="1014" y="16" width="10" height="10" rx="2.5" class="c4" />
+    <rect x="1080" y="44" width="10" height="10" rx="2.5" class="c2" />
 
-    <!-- Animated Neon Snake Path -->
-    <path class="snake-path" d="M 8 8 L 168 8 L 168 56 L 328 56 L 328 24 L 488 24 L 488 88 L 648 88 L 648 40 L 808 40 L 808 104 L 8 104 Z" />
-  </g>
-
-  <!-- Legend -->
-  <text x="30" y="162" font-family="'Fira Code', monospace" font-size="11" fill="#64748b">NEON CONTRIBUTION MATRIX // LIVE PULSE</text>
-  <g transform="translate(730, 152)">
-    <rect x="0" y="0" width="10" height="10" rx="2" fill="#1a1535" />
-    <rect x="16" y="0" width="10" height="10" rx="2" fill="#3b0764" />
-    <rect x="32" y="0" width="10" height="10" rx="2" fill="#7e22ce" />
-    <rect x="48" y="0" width="10" height="10" rx="2" fill="#ff007f" />
-    <rect x="64" y="0" width="10" height="10" rx="2" fill="#00f2fe" />
+    <path class="pulse" d="M 7 7 L 249 7 L 249 49 L 535 49 L 535 21 L 821 21 L 821 63 L 1129 63" />
   </g>
 </svg>

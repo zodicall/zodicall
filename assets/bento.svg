@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 185" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a10" />
+      <stop offset="100%" stop-color="#050508" />
+    </linearGradient>
+
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <linearGradient id="bar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="bar3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .head {
+      font: 600 11px 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      fill: #64748b;
+      letter-spacing: 2.5px;
+    }
+    .key {
+      font: 500 13px 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      fill: #64748b;
+    }
+    .val {
+      font: 600 13px 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      fill: #e2e8f0;
+    }
+    .accent {
+      font: 600 13px 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      fill: #38bdf8;
+    }
+    .lang {
+      font: 500 12px 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      fill: #cbd5e1;
+    }
+    .pct {
+      font: 500 11px 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      fill: #64748b;
+    }
+  </style>
+
+  <!-- LEFT CARD: SYSTEM SPECIFICATION -->
+  <g transform="translate(4, 6)">
+    <rect width="584" height="172" rx="12" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1" />
+    <circle cx="28" cy="28" r="3.5" fill="#ff5f56" opacity="0.8" />
+    <circle cx="42" cy="28" r="3.5" fill="#ffbd2e" opacity="0.8" />
+    <circle cx="56" cy="28" r="3.5" fill="#27c93f" opacity="0.8" />
+    <text x="558" y="32" text-anchor="end" class="head">01 // ARCHITECTURE</text>
+    <line x1="0" y1="46" x2="584" y2="46" stroke="#1e293b" stroke-width="0.8" />
+
+    <text x="28" y="76" class="key">domain</text>
+    <text x="145" y="76" class="val">Full-Stack Web · Real-Time Systems · Tooling</text>
+
+    <text x="28" y="106" class="key">core_stack</text>
+    <text x="145" y="106" class="accent">TypeScript · Python · Rust · C# · React</text>
+
+    <text x="28" y="136" class="key">philosophy</text>
+    <text x="145" y="136" class="val">Zero bloat. Sub-millisecond feel. Clean code.</text>
+
+    <rect x="492" y="124" width="7" height="14" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- RIGHT CARD: TELEMETRY & CODE DISTRIBUTION -->
+  <g transform="translate(612, 6)">
+    <rect width="584" height="172" rx="12" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1" />
+    <text x="28" y="32" class="head">02 // TELEMETRY MATRIX</text>
+    <circle cx="554" cy="28" r="3.5" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <line x1="0" y1="46" x2="584" y2="46" stroke="#1e293b" stroke-width="0.8" />
+
+    <!-- Bar 1 -->
+    <text x="28" y="76" class="lang">TypeScript / JS</text>
+    <rect x="180" y="66" width="320" height="7" rx="3.5" fill="#11131f" />
+    <rect x="180" y="66" width="265" height="7" rx="3.5" fill="url(#bar1)">
+      <animate attributeName="width" values="0;265" dur="1.2s" fill="freeze" />
+    </rect>
+    <text x="556" y="76" text-anchor="end" class="pct">68%</text>
+
+    <!-- Bar 2 -->
+    <text x="28" y="108" class="lang">Python / Rust</text>
+    <rect x="180" y="98" width="320" height="7" rx="3.5" fill="#11131f" />
+    <rect x="180" y="98" width="145" height="7" rx="3.5" fill="url(#bar2)">
+      <animate attributeName="width" values="0;145" dur="1.4s" fill="freeze" />
+    </rect>
+    <text x="556" y="108" text-anchor="end" class="pct">22%</text>
+
+    <!-- Bar 3 -->
+    <text x="28" y="140" class="lang">C# / Systems</text>
+    <rect x="180" y="130" width="320" height="7" rx="3.5" fill="#11131f" />
+    <rect x="180" y="130" width="85" height="7" rx="3.5" fill="url(#bar3)">
+      <animate attributeName="width" values="0;85" dur="1.6s" fill="freeze" />
+    </rect>
+    <text x="556" y="140" text-anchor="end" class="pct">10%</text>
+  </g>
+</svg>
